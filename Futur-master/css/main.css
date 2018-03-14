@@ -1,0 +1,283 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+}
+.header_topline {
+	background-color: #43484C;
+	padding: 15px 0;
+	color: #fff;
+}
+.header_topline a {
+	color: #fff;
+}
+.top_links {
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 10;
+}
+.top_links a {
+	text-decoration: underline;
+}
+.top_links a:hover {
+	text-decoration: none;
+}
+
+.soc_buttons {
+	float: right;
+}
+.soc_buttons > a {
+	font-size: 26px;
+	margin-left: 8px;
+}
+.auth_buttons,
+.main_mnu_button {
+	background-color: transparent;
+	border: medium none;
+	font-size: 26px;
+}
+.main_mnu_button {
+	color: #fff;
+	padding: 8px 15px 0;
+}
+.logo {
+	color: #fff;
+	display: block;
+	font-family: "RobotoCondensedBold";
+	font-size: 42px;
+	padding: 30px 0;
+	text-align: center;
+}
+.top_header {
+	background-color: #4AAAD2;
+}
+.main_mnu {
+	background-color: #3797BF;
+	color: #fff;
+	margin-bottom: 20px;
+}
+.main_mnu a {
+	color: #fff;
+	padding: 15px;
+	display: block;
+	-webkit-transition: all .95s;
+	-o-transition: all .95s;
+	transition: all .95s;
+}
+
+}
+.main_mnu a:hover {
+	background-color:#2787af;
+}
+
+.main_mnu ul {
+	padding: 0; 
+	margin: 0;
+	list-style-type: none;
+	float: left;
+	text-transform: uppercase;
+	
+	
+
+}
+.top_contacts {
+	float: right;
+	font-size: 32px;
+	padding: 0px 15px;
+	background-color:#2787af;
+	line-height: 53px;
+
+}
+.main_mnu ul li {
+	display: inline-block;
+}
+
+.main_mnu ul {
+	z-index: 12;
+}
+h1 {
+	color: #fff;
+	text-transform: uppercase;
+	text-align-last: center;
+	font-family: "RobotoCondensedRegular";
+	padding: 16px 0;
+} 
+
+
+.slider_conteiner img {
+	max-width: 100%;
+	
+
+}
+
+.slider_conteiner {
+	position: relative;
+}
+
+.next_button,
+.prev_button {
+	color: #fff;
+	font-size: 46px;
+	position: absolute;
+	z-index: 10;
+	top: 40%;
+	background-color: rgba(255,255,255,.5);
+	padding: 0 26px;
+	border-radius: 10em;
+	cursor: pointer;
+
+}
+
+.next_button {
+	right: 20px;
+}
+.prev_button {
+	left: 20px;
+}
+section.order {
+	background-color: #eee;
+	padding: 25px 0;
+}
+.sell_des {
+	font-size: 22px;
+	padding-top: 5px;
+	margin: 4px 32px;
+
+
+}
+.button {
+	display: block;
+	border: medium none;
+	background-color: #2BC6A4;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.button:hover {
+	background-color: #4feac8;
+}
+.button:active {
+	background-color: #14af8d;
+}
+.sell_rig .button {
+	float: right;
+	margin: 4px 32px;
+	
+}
+
+.hidden {
+	display: none;
+}
+.pop_form input[type="text"] {
+	display: block;
+	line-height: 24px;
+	margin: 0 auto 12px;
+	width: 90%;
+	border: #999 3px solid;
+}
+.pop_form .button {
+	margin: 20px auto 0;
+}
+.pop_form h3 {
+	margin: 10px auto 15px;
+	text-align: center;
+	font-weight: normal;
+	font-family: "RobotoCondensedRegular";
+	text-transform: uppercase;
+}
+.blog_item img {
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+.blog_item h3 {
+	text-transform: uppercase;
+	font-family: "RobotoCondensedRegular";
+	margin-bottom: 10px;
+}
+.blog_item h3 a {
+	text-decoration: underline;
+}
+.blog_item p {
+	margin-top: 0;
+}
+.right_aside {
+	padding: 15px 20px;
+	border-radius: 5px;
+	background-color: #EEEEEE;
+	margin-top: 30px;
+}
+.col-md-4 ul,
+.col-md-4 li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.col-md-4 li {
+	display: inline-block;
+	width: 300px;
+	position: relative;
+	overflow: hidden;
+}
+.col-md-4 img {
+	max-width: 85%;
+	
+	display: block;
+}
+.descr {
+	position: absolute;
+	left: 0;
+	width: 85%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	color: #fff;
+	padding-top: 80px;
+	text-align: center;
+	opacity: 0;
+	transform: scale(0) rotate(90deg);
+
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+.col-md-4 li:hover .descr {
+	opacity: 1;
+	top: 0;
+	transform: scale(1) rotate(0deg);
+}
+
+.foot {
+	background-color: #4AAAD2;
+	padding: 50px 0;
+
+}
+
+
+
+
+
