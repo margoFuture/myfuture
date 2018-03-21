@@ -27,6 +27,15 @@ body {
 	font-family: "RobotoRegular", sans-serif;
 	font-size: 16px;
 }
+html,
+body {
+  height: 100%;
+}
+.top_header{
+
+}
+
+
 .header_topline {
 	background-color: #43484C;
 	padding: 15px 0;
@@ -35,6 +44,11 @@ body {
 .header_topline a {
 	color: #fff;
 }
+
+.container{
+
+}
+
 .top_links {
 	display: inline-block;
 	vertical-align: middle;
@@ -47,22 +61,25 @@ body {
 	text-decoration: none;
 }
 
-.soc_buttons {
-	float: right;
-}
-.soc_buttons > a {
-	font-size: 26px;
-	margin-left: 8px;
-}
+
 .auth_buttons,
 .main_mnu_button {
 	background-color: transparent;
 	border: medium none;
 	font-size: 26px;
 }
+
 .main_mnu_button {
 	color: #fff;
 	padding: 8px 15px 0;
+}
+
+.soc_buttons {
+	float: right;
+}
+.soc_buttons > a {
+	font-size: 26px;
+	margin-left: 8px;
 }
 .logo {
 	color: #fff;
@@ -191,41 +208,7 @@ section.order {
 	
 }
 
-.hidden {
-	display: none;
-}
-.pop_form input[type="text"] {
-	display: block;
-	line-height: 24px;
-	margin: 0 auto 12px;
-	width: 90%;
-	border: #999 3px solid;
-}
-.pop_form .button {
-	margin: 20px auto 0;
-}
-.pop_form h3 {
-	margin: 10px auto 15px;
-	text-align: center;
-	font-weight: normal;
-	font-family: "RobotoCondensedRegular";
-	text-transform: uppercase;
-}
-.blog_item img {
-	max-width: 100%;
-	margin-bottom: 20px;
-}
-.blog_item h3 {
-	text-transform: uppercase;
-	font-family: "RobotoCondensedRegular";
-	margin-bottom: 10px;
-}
-.blog_item h3 a {
-	text-decoration: underline;
-}
-.blog_item p {
-	margin-top: 0;
-}
+
 .right_aside {
 	padding: 15px 20px;
 	border-radius: 5px;
@@ -249,35 +232,5 @@ section.order {
 	
 	display: block;
 }
-.descr {
-	position: absolute;
-	left: 0;
-	width: 85%;
-	height: 100%;
-	background-color: rgba(0,0,0,.5);
-	color: #fff;
-	padding-top: 80px;
-	text-align: center;
-	opacity: 0;
-	transform: scale(0) rotate(90deg);
 
-	-webkit-transition: all .5s;
-	-o-transition: all .5s;
-	transition: all .5s;
-}
-.col-md-4 li:hover .descr {
-	opacity: 1;
-	top: 0;
-	transform: scale(1) rotate(0deg);
-}
-
-.foot {
-	background-color: #4AAAD2;
-	padding: 50px 0;
-
-}
-
-
-
-
-
+ 
