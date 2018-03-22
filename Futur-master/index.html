@@ -102,9 +102,14 @@
 			</div>
 			<div class="col-md-5">
 				<div class="sell_rig">
-					<a href="#callback" class="button fancybox">
+					<a href="#callback" class="button fancybox" id="demo" type="button" onclick="myFunction()">
 						Заказать разработку
 					</a>
+					<script>
+ 						function myFunction() {
+   						document.getElementById("demo").innerHTML = "позже";
+						}
+					</script>
 				</div>
 			</div>
 		</div>
