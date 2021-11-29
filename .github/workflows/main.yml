@@ -1,0 +1,27 @@
+name: CI
+
+on:
+
+  push:
+
+    branches: [ main ]
+
+  pull_request:
+
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Trigger Acuneitx Scan
+
+        run: |
+
+          curl -k -i --request POST --url "https://online.acunetix.com/api/v1/scans" --header "X-Auth: [C7viOfhvWIwDqkERGxa5y3EyFWpPtJNsi5NtKG/z3/U=]" --header "content-type: application/json" --data '{"profile_id":"11111111-1111-1111-1111-111111111111","schedule":{"disable":false,"start_date":null,"time_sensitive":false},"user_authorized_to_scan":"yes","target_id":"[0c58e884a4614d770012ad8601898c9d]"}'
