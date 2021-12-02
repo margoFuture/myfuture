@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-PAGES_COUNT = 10
+PAGES_COUNT = 200
 OUT_FILENAME = 'out.json'
 
 
@@ -18,14 +18,14 @@ def get_soup(url, **kwargs):
     return soup
 
 
-def crawl_products(pages_count):
+def crawl_company(pages_count):
     """
-    Собирает со страниц с 1 по pages_count включительно ссылки на товары.
-    :param pages_count:     номер последней страницы с товарами.
+    Собирает со страниц с 1 по pages_count включительно ссылки на компании.
+    :param pages_count:     номер последней страницы с компаниями.
     :return:                список URL товаров.
     """
     urls = []
-    fmt = 'https://parsemachine.com/sandbox/catalog/?page={page}'
+    fmt = 'https://profit.kz/companies/all/integration/integrators/?page={page}'
 
     for page_n in range(1, 1 + pages_count):
         print('page: {}'.format(page_n))
@@ -35,21 +35,21 @@ def crawl_products(pages_count):
         if soup is None:
             break
 
-        for tag in soup.select('.product-card .title'):
+        for tag in soup.select('.company-list .h5'):
             href = tag.attrs['href']
-            url = 'https://parsemachine.com{}'.format(href)
+            url = 'https://profit.kz{}'.format(href)
             urls.append(url)
 
     return urls
 
 
-def parse_products(urls):
+def parse_company(urls):
     """
     Парсинг полей:
-        название, цена и таблица характеристик
+        название, телефон, адрес телефон таблица характеристик
     по каждому товару.
-    :param urls:            список URL на карточки товаров.
-    :return:                массив спарсенных данных по каждому из товаров.
+    :param urls:            список URL на карточки компании.
+    :return:                массив спарсенных данных по каждому из компаний.
     """
     data = []
 
@@ -60,10 +60,11 @@ def parse_products(urls):
         if soup is None:
             break
 
-        name = soup.select_one('#product_name').text.strip()
-        amount = soup.select_one('#product_amount').text.strip()
+        name = soup.select_one('#company-name').text.strip()
+        cont = soup.select_one('#company-contact').text.strip()
+        .glyphicon= soup.select_one('#.glyphicon').text.strip()
         techs = {}
-        for row in soup.select('#characteristics tbody tr'):
+        for row in soup.select('#.glyphicon tbody tr'):
             cols = row.select('td')
             cols = [c.text.strip() for c in cols]
             techs[cols[0]] = cols[1]
